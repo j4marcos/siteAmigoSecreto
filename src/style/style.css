@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    
 }
 
 nav {
@@ -40,8 +39,23 @@ img {
     max-height: 400px;
 }
 
+h1 {
+    font-size: 50px;
+    
+}
+
+h2 {
+    font-size: 25px;
+}
+
+span {
+    text-decoration: underline;
+}
+
 .page1 {
-    background-image: url("imgs/pexels-nicole-michalou-5774925.jpg");
+    background-image: url("imgs/familia.jpg");
+    color: white;
+    text-shadow: 0px 0px 30px  black ;
 }
 
 .page2 {
@@ -50,6 +64,7 @@ img {
 
 .page3 {
     background-image: url("imgs/pexels-rdne-stock-project-6518869\ \(1\).jpg");
+    text-shadow: 0px 0px 20px  white ;
 }
 
 .upDiv {
