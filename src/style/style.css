@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    
 }
 
 nav {
@@ -17,11 +18,19 @@ section {
     border: 1px black solid;
     height: 100vh;
     flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: auto;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 nav .siteLogo {
     display: flex;
     align-items: center;
+}
+
+nav .navButtons {
+    margin-right: 15px;
 }
 
 img {
@@ -30,8 +39,33 @@ img {
     max-height: 400px;
 }
 
+.page1 {
+    background-image: url("imgs/pexels-nicole-michalou-5774925.jpg");
+}
+
+.page2 {
+    background-image: url("imgs/pexels-kampus-production-7802474.jpg");
+}
+
+.page3 {
+    background-image: url("imgs/pexels-rdne-stock-project-6518869\ \(1\).jpg");
+}
+
+.upDiv {
+    margin-top: 50px;
+    margin-left: 10vw;
+}
+
+.bottomDiv {
+    margin-bottom: 20vw;
+    margin-top: 50px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
 .imgsRedes {
     display: flex;
+    justify-content: center;
 }
 .imglogo {
     width: 100px;
