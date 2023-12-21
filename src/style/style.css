@@ -12,6 +12,12 @@ nav {
     border: 1px black solid;
 }
 
+button {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+}
+
 section {
     display: flex;
     border: 1px black solid;
@@ -53,17 +59,17 @@ span {
 }
 
 .page1 {
-    background-image: url("imgs/familia.jpg");
+    background-image: url("imgs/Projeto\ \(20231221082206\).jpg");
     color: white;
     text-shadow: 0px 0px 30px  black ;
 }
 
 .page2 {
-    background-image: url("imgs/pexels-kampus-production-7802474.jpg");
+    background-image: url("imgs/Projeto\ \(20231221081943\).jpg");
 }
 
 .page3 {
-    background-image: url("imgs/pexels-rdne-stock-project-6518869\ \(1\).jpg");
+    background-image: url("imgs/Projeto\ \(20231221081910\).jpg");
     text-shadow: 0px 0px 20px  white ;
 }
 
@@ -73,7 +79,7 @@ span {
 }
 
 .bottomDiv {
-    margin-bottom: 20vw;
+    margin-bottom: 10vw;
     margin-top: 50px;
     margin-right: 10vw;
     margin-left: 10vw;
