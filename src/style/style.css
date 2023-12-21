@@ -1,164 +1,45 @@
 body {
-    user-select: none;
-    margin: 0;
-    border: none;
-}
-
-nav {
-    display: flex;
-    background-color: lightgray;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.navButtons {
-    height: inherit;
-
-}
-
-.siteLogo {
-    display: flex;
-    align-items: center;
-}
-
-
-
-.siteName {
-    padding: 0px 20px;
-    font-size: 32px;
-}
-
-.siteName .amigo {
-    color: brown;
-}
-
-.siteName .secreto {
-    color: green;
-}
-
-h1 {
-    font-size: 64px;
-    margin: 0px;
-    /* margin-top: 30px; */
-}
-
-h2 {
-    font-size: 32px;
-    margin: 0;
-    /* margin: 10px; */
-}
-
-span {
-    text-decoration: underline;
-}
-
-button {
-    margin: 10px;
-    height: 40px;
-    width: 100px;
-}
-
-footer {
-    background-color: darkgray;
-    height: 200px;
-}
-
-section {
-    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
-.page1 {
-    background-color: whitesmoke;
-}
-
-.img1 {
-    background-color: rgb(97, 124, 115);
-    height: 300px;
-    width: 500px;
-}
-
-button.criarGrupo {
-    height: 50px;
-    width: 120px;
-}
-
-.page2 {
-    background-color: rgb(228, 221, 235);
+nav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.page2 h1 {
-    font-size: 45px;
-}
-
-.img2 {
-    background-color: rgb(95, 121, 112);
-    height: 100px;
-    width: 1000px;
-
-}
-
-.toppage2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.downpage2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.page3 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.img3 {
-    background-color: rgb(89, 116, 107);
-    height: 300px;
-    width: 500px;
-}
-
-.toppage3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-
-.downpage3 {
-    display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    border: 1px black solid;
+}
+
+section {
+    display: flex;
+    border: 1px black solid;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+nav .siteLogo {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
 }
 
 .imgsRedes {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    
 }
-
 .imglogo {
-    background-color: rgb(95, 121, 112);
-    height: 100px;
     width: 100px;
+    height: 100px;
+    background-color: rgb(138, 138, 138);
     border-radius: 50%;
 }
 
+.img3 {
+    max-height: 100px;
+}

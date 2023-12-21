@@ -1,7 +1,7 @@
 const partySpan = document.body.querySelector(".nomeFestas")
 const gitSpan = document.body.querySelector(".nomePresentes")
-const partiesNames = ["amigo secreto","amigo oculto","amigo da onça", "amigo ao contrário"]
-const gitsNames = ["presentes","surpresa", "tralhas","enigma" ]
+const partiesNames = ["amigo secreto","amigo oculto","amigo da onça","festas"]
+const gitsNames = ["presentes","surpresa", "tralhas", "lembrançinhas"]
 let idx = 0
 console.log(partySpan)
 
