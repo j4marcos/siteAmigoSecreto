@@ -1,101 +1,148 @@
-body {
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 nav {
     display: flex;
+    margin: 10px 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .buttons {
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    border: 1px black solid;
 }
 
 button {
-    height: 30px;
-    width: 90px;
-    border-radius: 10px;
+    border: none;
+    height: 40px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: lightgray; 
+}
+
+button.perfil {
+    width: 40px;
+    border-radius: 50%;
+    background-image: url("imgs/depositphotos_137014128-stock-illustration-user-profile-icon.jpg");
+    background-size: cover;
+}
+
+header {
+    padding: 30px;
 }
 
 section {
     display: flex;
-    border: 1px black solid;
-    height: 100vh;
-    flex-wrap: wrap;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-nav .siteLogo {
-    display: flex;
+    background-color: lightgrey;
+    min-height: 100vh;
+    flex-direction: column;
     align-items: center;
-}
-
-nav .navButtons {
-    margin-right: 15px;
-}
-
-img {
-    width: 100%;
-    max-width: 500px;
-    max-height: 400px;
-}
-
-h1 {
-    font-size: 50px;
+    flex-wrap: wrap;
     
 }
 
-h2 {
-    font-size: 25px;
-}
-
-span {
-    text-decoration: underline;
-}
-
-.page1 {
-    background-image: url("imgs/Projeto\ \(20231221082206\).jpg");
-    color: white;
-    text-shadow: 0px 0px 30px  black ;
-}
-
-.page2 {
-    background-image: url("imgs/Projeto\ \(20231221081943\).jpg");
-}
-
-.page3 {
-    background-image: url("imgs/Projeto\ \(20231221081910\).jpg");
-    text-shadow: 0px 0px 20px  white ;
-}
-
-.upDiv {
-    margin-top: 10px;
-    margin-left: 10vw;
-}
-
-.bottomDiv {
-    margin-bottom: 10vw;
-    margin-top: 50px;
-    margin-right: 10vw;
-    margin-left: 10vw;
-}
-
-.imgsRedes {
+div.grupo {
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 500px;
     display: flex;
-    justify-content: center;
-}
-.imglogo {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(138, 138, 138);
-    border-radius: 50%;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
 }
 
-.img3 {
-    max-height: 100px;
+div.grupoInfo {
+    background-size: cover;
+    background-position: center;
+    background-color: gray;
+}
+
+div.grupoInfo header{
+    height: 30px;
+    background-color: white;
+}
+
+div.grupoInfo .regras {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.grupoInfo .regras .info {
+    background-color: white;
+    height: auto;
+    width: auto; 
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+div.amigoSecreto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.amigoSecreto .amigo{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.amigoSecreto .foto{
+    background-image: url(imgs/depositphotos_137014128-stock-illustration-user-profile-icon.jpg);
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    position: relative;
+}
+
+div.amigoSecreto .foto::before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-image: url(presentIcons/icons8-gift-unscreen.gif);
+    position: absolute;
+    top: -15px;
+    left: 70px;
+}
+
+
+
+
+div.amigoSecreto .nome{
+    margin: auto;
+}
+
+div.amigoSecreto .listaDeDesejos {
+    background-color: lightgray;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+}
+
+@media (max-width: 450px) {
+    div.grupo {
+        flex-wrap: wrap;
+    }
 }
