@@ -59,27 +59,3 @@ section {
 section.ativo {
     width: 100vw;
 }
-
-header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 85vh;
-}
-
-header h1 {
-    font-size: 50px;
-}
-
-header button {
-    margin: 15px;
-}
-
-
-@media (min-width: 800px) {
-    header {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}

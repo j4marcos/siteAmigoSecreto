@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 nav {
     display: flex;
     padding: 10px 20px;
@@ -108,6 +109,10 @@ div.grupoInfo {
     background-color: gray;
 }
 
+div.grupoInfo h1 {
+    font-size: 1.5rem;
+}
+
 div.grupoInfo .nomeGrupo {
     padding: 20px;
     padding-bottom: 10px;
@@ -145,6 +150,7 @@ div.amigoSecreto .amigo {
     justify-content: center;
     align-items: center;
 }
+
 
 div.amigoSecreto .foto {
     background-image: url(imgs/depositphotos_137014128-stock-illustration-user-profile-icon.jpg);
@@ -210,6 +216,83 @@ section#criar {
 
 section#perfil {
     background-color: lightgray;
+}
+
+
+section#indexPage {
+    background-color: white;
+    
+}
+
+.page#page1 {
+    height: 85vh;
+}
+
+.page#page2 {
+    height: auto;
+}
+
+.page#page2 .grupo{
+    margin: 10px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.281);
+}
+
+.page#page2 .redesSociais{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    justify-content: center;
+}
+
+.page#page2 .redesSociais .linkRede {
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.page h1 {
+    font-size: 50px;
+    margin: 0px 10px;
+}
+
+.page h2 {
+    margin: 0px 10px;
+}
+
+.page button {
+    margin: 15px;
+}
+
+.page #downPage2 {
+    margin-top: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+@media (min-width: 800px) {
+    .page #downPage2 {
+        margin-left: 50px;
+    }
+
+    .page {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 50px;
+    }
 }
 
 @media (max-width: 450px) {

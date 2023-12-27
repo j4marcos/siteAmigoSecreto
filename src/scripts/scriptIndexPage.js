@@ -3,9 +3,10 @@ const btns = document.querySelectorAll('button')
 const btnInicio = document.querySelector('button.inicio')
 const btnEntrar = document.querySelector('button.entrar')
 const btnPerfil = document.querySelector('button.perfil')
+const btnCriarGrupo = document.querySelector('button.criarGrupo')
 
 const festa = document.querySelector('.mudar')
-const nomesFestas = ['amigo secreto','amigo oculto','amigo chinelo', 'amigo doce', 'amigo da onça']
+const nomesFestas = ['amigo secreto','amigo oculto','amigo chinelo', 'amigo doce', 'amigo onça']
 let n = 0
 
 btnInicio.addEventListener('click', (e) => {
@@ -19,6 +20,11 @@ btnEntrar.addEventListener('click', (e) => {
 })
 
 btnPerfil.addEventListener('click', (e) => {
+    fecharSessoes(e)
+    sessoes.item(1).classList.add('ativo')
+})
+
+btnCriarGrupo.addEventListener('click', (e) => {
     fecharSessoes(e)
     sessoes.item(1).classList.add('ativo')
 })
