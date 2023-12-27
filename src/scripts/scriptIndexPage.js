@@ -11,22 +11,22 @@ let n = 0
 
 btnInicio.addEventListener('click', (e) => {
     fecharSessoes(e)
-    sessoes.item(0).classList.add('ativo')
+    abrirSessao(sessoes.item(0))
 })
 
 btnEntrar.addEventListener('click', (e) => {
     fecharSessoes(e)
-    sessoes.item(1).classList.add('ativo')
+    abrirSessao(sessoes.item(1))
 })
 
 btnPerfil.addEventListener('click', (e) => {
     fecharSessoes(e)
-    sessoes.item(1).classList.add('ativo')
+    abrirSessao(sessoes.item(1))
 })
 
 btnCriarGrupo.addEventListener('click', (e) => {
     fecharSessoes(e)
-    sessoes.item(1).classList.add('ativo')
+    abrirSessao(sessoes.item(1))
 })
 
 function fecharSessoes(btn) {
@@ -35,7 +35,13 @@ function fecharSessoes(btn) {
 
     sessoes.forEach((e)=> {
         e.classList.remove('ativo')
+        e.classList.add("desativo")
     })
+}
+
+function abrirSessao(s) {
+    s.classList.remove('desativo')
+    s.classList.add('ativo')
 }
 
 

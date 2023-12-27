@@ -55,10 +55,16 @@ section {
     overflow: hidden;
     width: 0px;
     transition: width 0.5s ease-in-out;
+    height: fit-content;
 }
 
 section.ativo {
     width: 100vw;
+}
+
+section.desativo {
+    height: calc(100vh - 72px);
+    width: 0px;
 }
 
 section.grupos {
@@ -67,6 +73,10 @@ section.grupos {
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 100px;
+}
+
+section.grupos.ativo {
+    max-height: 10000vw;
 }
 
 section.grupos .aviso {
