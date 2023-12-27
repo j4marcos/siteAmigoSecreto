@@ -5,5 +5,14 @@ const btnCriar = document.querySelector('button.criar')
 const btnPerfil = document.querySelector('button.perfil')
 
 btnGrupos.addEventListener('click', (e) => {
+    fecharSessoes()
 
 })
+
+function fecharSessoes() {
+    sessoes.forEach((e)=> {
+        e.style.height = '0px'
+        console.log(e)
+    })
+    
+}

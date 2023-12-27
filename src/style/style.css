@@ -6,7 +6,7 @@
 
 nav {
     display: flex;
-    margin: 10px 20px;
+    padding: 10px 20px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -26,7 +26,11 @@ button {
     margin-left: 20px;
     padding: 10px;
     border-radius: 8px;
-    background-color: lightgray; 
+    background-color: lightgray;
+}
+
+button.ativo {
+    background-color: gray;
 }
 
 button.perfil {
@@ -41,13 +45,38 @@ header {
 }
 
 section {
+    overflow: hidden;
+    height: 0px;
+}
+
+section.grupos {
     display: flex;
     background-color: lightgrey;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
+    height: auto;
     flex-wrap: wrap;
-    
+}
+
+section.grupos .aviso {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+
+    /* desativar com o js quando nao tiver grupos */
+    display: none;
+}
+
+section.grupos .aviso .presentGif{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-image: url(presentIcons/a757d203a381c5628bddfa55af3094-unscreen.gif);
+    background-size: cover;
+    background-position: -30px 0px;
 }
 
 div.grupo {
@@ -58,7 +87,7 @@ div.grupo {
     max-width: 500px;
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
+    height: fit-content;
 }
 
 div.grupoInfo {
@@ -67,9 +96,11 @@ div.grupoInfo {
     background-color: gray;
 }
 
-div.grupoInfo header{
-    height: 30px;
+div.grupoInfo .nomeGrupo {
+    padding: 20px;
+    padding-bottom: 10px;
     background-color: white;
+
 }
 
 div.grupoInfo .regras {
@@ -80,8 +111,6 @@ div.grupoInfo .regras {
 
 div.grupoInfo .regras .info {
     background-color: white;
-    height: auto;
-    width: auto; 
     margin: 10px;
     padding: 10px 20px;
     border-radius: 8px;
@@ -97,7 +126,7 @@ div.amigoSecreto {
     align-items: center;
 }
 
-div.amigoSecreto .amigo{
+div.amigoSecreto .amigo {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +134,7 @@ div.amigoSecreto .amigo{
     align-items: center;
 }
 
-div.amigoSecreto .foto{
+div.amigoSecreto .foto {
     background-image: url(imgs/depositphotos_137014128-stock-illustration-user-profile-icon.jpg);
     background-size: cover;
     height: 100px;
@@ -126,10 +155,13 @@ div.amigoSecreto .foto::before {
 }
 
 
-
-
-div.amigoSecreto .nome{
+div.amigoSecreto .nome {
     margin: auto;
+}
+
+div.amigoSecreto .rotulo {
+    margin-top: 15px;
+    margin-bottom: -15px;
 }
 
 div.amigoSecreto .listaDeDesejos {
@@ -139,10 +171,41 @@ div.amigoSecreto .listaDeDesejos {
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
+    min-width: 150px;
+    max-height: 200px;
+    overflow-y: auto;
+    
 }
+
+
+div.amigoSecreto.indefinido div.aviso {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+section#adicionar {
+    background-color: yellow;
+}
+
+section#criar {
+    background-color: greenyellow;
+}
+
+section#perfil {
+    background-color: blueviolet;
+}
+
 
 @media (max-width: 450px) {
     div.grupo {
         flex-wrap: wrap;
+    }
+    div.aviso {
+        flex-wrap: nowrap;
     }
 }
