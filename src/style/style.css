@@ -31,6 +31,7 @@ button {
 
 button.ativo {
     background-color: gray;
+    border: 2px solid gray;
 }
 
 button.perfil {
@@ -44,16 +45,27 @@ header {
     padding: 30px;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
 section {
     overflow: hidden;
-    height: 0px;
+    width: 0px;
+    transition: width 0.5s ease-in-out;
+}
+
+section.ativo {
+    width: 100vw;
 }
 
 section.grupos {
     display: flex;
     background-color: lightgrey;
-    height: auto;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
 }
 
 section.grupos .aviso {
@@ -189,17 +201,16 @@ div.amigoSecreto.indefinido div.aviso {
 
 
 section#adicionar {
-    background-color: yellow;
+    background-color: white;
 }
 
 section#criar {
-    background-color: greenyellow;
+    background-color: white;
 }
 
 section#perfil {
-    background-color: blueviolet;
+    background-color: lightgray;
 }
-
 
 @media (max-width: 450px) {
     div.grupo {
