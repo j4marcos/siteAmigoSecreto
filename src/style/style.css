@@ -42,6 +42,7 @@ button.perfil {
     background-size: cover;
 }
 
+
 header {
     padding: 30px;
 }
@@ -58,6 +59,10 @@ section {
     transition: width 0.5s ease-in-out;
 }
 
+section .page, .gruposContainer {
+    width: 100vw;
+}
+
 section.ativo {
     width: 100vw;
     height: auto;
@@ -69,16 +74,19 @@ section.desativo {
 }
 
 section.grupos {
-    display: flex;
     background-color: lightgrey;
+}
+
+section.grupos .gruposContainer {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 100px;
-
 }
 
-section.grupos.ativo {
+section.grupos.ativo .gruposContainer {
     max-height: 10000vw;
+    height: auto;
 }
 
 section.grupos .aviso {
@@ -336,5 +344,16 @@ section#indexPage {
 
     div.aviso {
         flex-wrap: nowrap;
+    }
+
+    nav {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 380px) {
+    nav .buttons *{
+        margin-left: 5px;
+        padding: 5px;
     }
 }
