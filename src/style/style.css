@@ -54,12 +54,13 @@ header {
 section {
     overflow: hidden;
     width: 0px;
+    height: calc(100vh - 72px);
     transition: width 0.5s ease-in-out;
-    height: fit-content;
 }
 
 section.ativo {
     width: 100vw;
+    height: auto;
 }
 
 section.desativo {
@@ -73,6 +74,7 @@ section.grupos {
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 100px;
+
 }
 
 section.grupos.ativo {
@@ -93,7 +95,7 @@ section.grupos .aviso {
     display: none;
 }
 
-section.grupos .aviso .presentGif{
+section.grupos .aviso .presentGif {
     margin: auto;
     width: 200px;
     height: 200px;
@@ -151,6 +153,7 @@ div.amigoSecreto {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
 
 div.amigoSecreto .amigo {
@@ -168,7 +171,7 @@ div.amigoSecreto .foto {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    margin: 20px;
+    margin: 10px;
     position: relative;
 }
 
@@ -187,12 +190,18 @@ div.amigoSecreto .nome {
     margin: auto;
 }
 
-div.amigoSecreto .rotulo {
-    margin-top: 15px;
-    margin-bottom: -15px;
+div.amigoSecreto .listaDeDesejos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-div.amigoSecreto .listaDeDesejos {
+div.amigoSecreto .rotulo {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+div.amigoSecreto .listaDePresentes {
     background-color: lightgray;
     height: fit-content;
     width: fit-content;
@@ -202,7 +211,7 @@ div.amigoSecreto .listaDeDesejos {
     min-width: 150px;
     max-height: 200px;
     overflow-y: auto;
-    
+
 }
 
 
@@ -215,6 +224,10 @@ div.amigoSecreto.indefinido div.aviso {
     flex-wrap: wrap;
 }
 
+div.amigoSecreto .desativo {
+    display: none;
+}
+
 
 section#adicionar {
     background-color: white;
@@ -224,6 +237,18 @@ section#criar {
     background-color: white;
 }
 
+section#criar form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+section#criar button {
+    width: fit-content;
+}
+
 section#perfil {
     background-color: lightgray;
 }
@@ -231,7 +256,7 @@ section#perfil {
 
 section#indexPage {
     background-color: white;
-    
+
 }
 
 .page#page1 {
@@ -242,12 +267,12 @@ section#indexPage {
     height: auto;
 }
 
-.page#page2 .grupo{
+.page .grupo {
     margin: 10px;
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.281);
 }
 
-.page#page2 .redesSociais{
+.page#page2 .redesSociais {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -269,7 +294,6 @@ section#indexPage {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 100vh;
 }
 
 .page h1 {
@@ -287,9 +311,9 @@ section#indexPage {
 
 .page #downPage2 {
     margin-top: 50px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media (min-width: 800px) {
@@ -301,7 +325,7 @@ section#indexPage {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-        margin: 50px;
+        padding: 50px;
     }
 }
 
@@ -309,6 +333,7 @@ section#indexPage {
     div.grupo {
         flex-wrap: wrap;
     }
+
     div.aviso {
         flex-wrap: nowrap;
     }

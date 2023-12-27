@@ -42,16 +42,21 @@
                     </div>
                 </div>
                 <div class="amigoSecreto">
+                    <span class="rotulo">amigo secreto</span>
                     <div class="amigo">
                         <div class="foto"></div>
                         <div class="nome">
                             <h2>fulana</h2>
                         </div>
                     </div>
-                    <span class="rotulo">lista de desejos</span>
-                    <div class="listaDeDesejos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                        laboriosam.
+
+                    <div class="listaDeDesejos">
+                        <span class="rotulo">lista de desejos</span>
+                        <div class="listaDePresentes">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, impedit?
+                        </div>
                     </div>
+
                     <div class="redesSociais">
                     </div>
                 </div>
@@ -86,15 +91,96 @@
 
         </section>
 
-        </section>
+
         <section id="adicionar">
-            <h1>adicionar novo grupo</h1>
+            <div class="page" id="page1">
+                <div>
+                    <h1>Facilite o <span class="mudar">amigo secreto</span></h1>
+                    <h2>e divirtase com amigos e familia!</h2>
+                    <a href="homepage.html">
+                        <h1>pagina prototipo</h1>
+                    </a>
+                </div>
+
+                <div>
+                    <h2>organize a confraternização <br> de maneira simples e pratica</h2>
+                    <button class="criarGrupo">criar grupo</button>
+                </div>
+            </div>
         </section>
+
+
         <section id="criar">
-            <h1>criar grupo</h1>
+            <div class="page">
+
+                <div>
+                    <h1>crie seu grupo:</h1>
+                    <form action="" class="criarGrupo">
+                        <label for="nomeDoGrupo">nome do grupo:</label>
+                        <input type="text" id="nomeDoGrupo">
+                        <label for="tipoFesta">tipo da brincadeira</label>
+                        <select name="tipoFesta" id="tipoFesta">
+                            <option value="secreto">amigo secreto</option>
+                            <option value="oculto">amigo oculto</option>
+                            <option value="doce">amigo doce</option>
+                            <option value="onça">amigo da onça</option>
+                            <option value="chinelo">amigo chinelo</option>
+                        </select>
+                        <label for="listaDeDesejos???">permitir lista de desejos</label>
+                        <input type="checkbox" name="" id="listaDeDesejos???">
+                        <label for="data">data da festa</label>
+                        <input type="date" name="" id="data">
+                        <label for="addRegra">adicionar regra</label>
+                        <button id="addRegra">+</button>
+                        <label for="descricao"></label>
+                        <input type="text" name="" id="descricao">
+                        <label for="addLink">adicionar link</label>
+                        <button id="addLink">+</button>
+                    </form>
+                    <button type="submit">criar grupo</button>
+                </div>
+
+                <div class="cardPreview">
+                    <h2>Previsualização:</h2>
+                    <div class="grupo">
+                        <div class="grupoInfo">
+                            <div class="nomeGrupo">
+                                <h1></h1>
+                            </div>
+                            <div class="regras">
+                                <!-- <div class="info"></div>
+                                <div class="info"></div>
+                                <div class="info"></div> -->
+                            </div>
+                        </div>
+                        <div class="amigoSecreto">
+                            <span class="rotulo">amigo secreto</span>
+                            <div class="amigo">
+                                <div class="foto"></div>
+                                <div class="nome">
+                                    <h2>[amigo]</h2>
+                                </div>
+                            </div>
+
+                            <div class="listaDeDesejos desativo">
+                                <span class="rotulo">lista de desejos</span>
+                                <div class="listaDePresentes">
+                                </div>
+                            </div>
+
+                            <div class="redesSociais desativo">
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
         </section>
+
+
+
         <section id="perfil">
-            <h1>verificar perfil</h1>
+            
         </section>
 
     </div>
