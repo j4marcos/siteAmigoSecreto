@@ -42,7 +42,7 @@
                     <div class="grupo">
                         <div class="grupoInfo">
                             <div class="nomeGrupo">
-                                <h1>amigo secreto da familia</h1>
+                                <h1>amigo secreto da familia </h1>
                             </div>
                             <div class="regras">
                                 <div class="info">regra</div>
@@ -96,16 +96,17 @@
                     <div class="presentGif"></div>
                     <h2>voce ainda não adicionou nenhum grupo</h2>
                 </div>
-                
+
                 <div class="grupo">
                     <div class="grupoInfo">
                         <div class="nomeGrupo">
-                            <h1>amigo secreto da familia</h1>
+                            <h1>amigo secreto da familia </h1>
                         </div>
                         <div class="regras">
                             <div class="info">regra</div>
                             <div class="info">regra</div>
-                            <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error ut
+                            <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error
+                                ut
                                 libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque accusantium et
                                 totam
                                 molestiae quia!</div>
@@ -137,7 +138,8 @@
                         <div class="regras">
                             <div class="info">regra</div>
                             <div class="info">status: aguardando</div>
-                            <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error ut
+                            <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error
+                                ut
                                 libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque accusantium et
                                 totam
                                 molestiae quia!</div>
@@ -156,9 +158,9 @@
 
 
         <section id="adicionar">
-            <div class="page" id="page1">
+            <div class="page" id="">
                 <div>
-                    <h1>Facilite o <span class="mudar">amigo secreto</span></h1>
+                    <h1>Facilite o <span class="">amigo secreto</span></h1>
                     <h2>e divirtase com amigos e familia!</h2>
 
                     <button>entrar no grupo</button>
@@ -174,8 +176,10 @@
                             <div class="regras">
                                 <div class="info">regra</div>
                                 <div class="info">status: aguardando</div>
-                                <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error ut
-                                    libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque accusantium et
+                                <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt
+                                    error ut
+                                    libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque
+                                    accusantium et
                                     totam
                                     molestiae quia!</div>
                             </div>
@@ -197,27 +201,33 @@
 
                 <div>
                     <h1>crie seu grupo:</h1>
-                    <form action="" class="criarGrupo">
+                    <form action="formsubmiturlapi" class="criarGrupo">
                         <label for="nomeDoGrupo">nome do grupo:</label>
                         <input type="text" id="nomeDoGrupo">
                         <label for="tipoFesta">tipo da brincadeira</label>
                         <select name="tipoFesta" id="tipoFesta">
-                            <option value="secreto">amigo secreto</option>
-                            <option value="oculto">amigo oculto</option>
-                            <option value="doce">amigo doce</option>
-                            <option value="onça">amigo da onça</option>
-                            <option value="chinelo">amigo chinelo</option>
+                            <option value="amigo secreto">amigo secreto</option>
+                            <option value="amigo oculto">amigo oculto</option>
+                            <option value="amigo doce">amigo doce</option>
+                            <option value="amigo onça">amigo da onça</option>
+                            <option value="amigo chinelo">amigo chinelo</option>
                         </select>
-                        <label for="listaDeDesejos???">permitir lista de desejos</label>
-                        <input type="checkbox" name="" id="listaDeDesejos???">
-                        <label for="data">data da festa</label>
-                        <input type="date" name="" id="data">
-                        <label for="addRegra">adicionar regra</label>
-                        <button id="addRegra">+</button>
-                        <label for="descricao"></label>
-                        <input type="text" name="" id="descricao">
-                        <label for="addLink">adicionar link</label>
-                        <button id="addLink">+</button>
+                        <div>
+                            <label for="checkListaDeDesejos">permitir lista de desejos</label>
+                            <input type="checkbox" name="" id="checkListaDeDesejos">
+                        </div>
+                        <label for="regraText">adicionar regra</label>
+                        <div>
+                            <input type="text" name="" id="regraText">
+                            <button id="addRegra">+</button>
+                        </div>
+                        <label for="descricaoText">descrição</label>
+                        <input type="text" name="" id="descricaoText">
+                        <label for="linkText">adicionar link</label>
+                        <div>
+                            <input type="text" name="" id="linkText">
+                            <button id="addLink">+</button>
+                        </div>
                     </form>
                     <button type="submit">criar grupo</button>
                 </div>
@@ -230,30 +240,23 @@
                                 <h1></h1>
                             </div>
                             <div class="regras">
-                                <!-- <div class="info"></div>
-                                <div class="info"></div>
-                                <div class="info"></div> -->
                             </div>
                         </div>
                         <div class="amigoSecreto">
-                            <span class="rotulo">amigo secreto</span>
+                            <span class="rotulo tipoFesta">amigo secreto</span>
                             <div class="amigo">
                                 <div class="foto"></div>
                                 <div class="nome">
-                                    <h2>[amigo]</h2>
+                                    <h2>fulana</h2>
                                 </div>
                             </div>
-
                             <div class="listaDeDesejos desativo">
                                 <span class="rotulo">lista de desejos</span>
-                                <div class="listaDePresentes">
-                                </div>
+                                <div class="listaDePresentes"></div>
                             </div>
-
-                            <div class="redesSociais desativo">
+                            <div class="redesSociais">
                             </div>
                         </div>
-        
                     </div>
                 </div>
             </div>
@@ -262,7 +265,7 @@
 
 
         <section id="perfil">
-            
+
         </section>
 
     </div>
