@@ -92,7 +92,8 @@ fortextarea.forEach((e)=> {
             info.innerText = e.target.value
             if (e.target.value === '') info.remove()
         } else {
-            info = document.createElement('div.info')
+            info = document.createElement('div')
+            info.classList.add('info')
             info.classList.add(e.target.id)
             regrasArea.appendChild(info)
             info.innerText = e.target.value
