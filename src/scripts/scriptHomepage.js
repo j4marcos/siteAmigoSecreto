@@ -4,39 +4,60 @@ const btnGrupos = document.querySelector('button.grupos')
 const btnAdicionarGrupo = document.querySelectorAll('button.adicionarGrupo')
 const btnCriarGrupo = document.querySelectorAll('button.criarGrupo')
 const btnPerfil = document.querySelector('button.perfil')
-const btnInicio = document.querySelector('button.inicio')
+const btnInicio = document.querySelector('a.inicio')
+let pageN = 0
+
+let data = localStorage.getItem('amigoSecretoData')
+if (data) {
+     data = JSON.parse(data)
+     mudarSessoes(data.paginaAtual)
+} else {
+    localStorage.setItem('amigoSecretoData',JSON.stringify({
+        paginaAtual : pageN,
+    }))
+    atualizarLocalstorage()
+}
+
+function atualizarLocalstorage () {
+    data = (localStorage.getItem('amigoSecretoData'))
+    data = JSON.parse(data)
+    data.paginaAtual = pageN
+    
+    localStorage.setItem('amigoSecretoData', JSON.stringify(data))
+}
 
 
+btnInicio.addEventListener('click', (e) => {
+    e.preventDefault()
+    mudarSessoes(0, e)
+})
 
 btnGrupos.addEventListener('click', (e) => {
-    fecharSessoes(e)
-    abrirSessao(sessoes.item(1))
+    mudarSessoes(1, e)
     carregarGrupos()
 })
 
 btnAdicionarGrupo.forEach(e => {
     e.addEventListener('click', (e) => {
-        fecharSessoes(e)
-        abrirSessao(sessoes.item(2))
+        mudarSessoes(2, e)
 })
 })
 
 btnCriarGrupo.forEach(e => {
     e.addEventListener('click', (e) => {
-        fecharSessoes(e)
-    abrirSessao(sessoes.item(3))
+        mudarSessoes(3, e)
 })
 })
 
 
 btnPerfil.addEventListener('click', (e) => {
-    fecharSessoes(e)
-    abrirSessao(sessoes.item(4))
+    mudarSessoes(4, e)
 })
 
 
 
-function fecharSessoes(btn) {
+
+function mudarSessoes(n, btn) {
     btns.forEach((e)=> e.classList.remove('ativo'))
     if (btn) btn.srcElement.classList.add('ativo')
 
@@ -44,11 +65,11 @@ function fecharSessoes(btn) {
         e.classList.remove('ativo')
         e.classList.add("desativo")
     })
-}
 
-function abrirSessao(s) {
-    s.classList.remove('desativo')
-    s.classList.add('ativo')
+    sessoes[n].classList.remove('desativo')
+    sessoes[n].classList.add('ativo')
+    pageN = n
+    atualizarLocalstorage()
 }
 
 function carregarGrupos() {
@@ -75,8 +96,9 @@ const checkListaDeDesejos = form.querySelector('#checkListaDeDesejos')
 const chechTipoFesta = form.querySelector("#tipoFesta")
 const descricaoText = form.querySelector('#descricaoText')
 const regraText = form.querySelector('#regraText')
-const linkText = form.querySelector('#linkText')
-const fortextarea = [regraText, linkText, descricaoText]
+let regrasN = 0
+const btnAddRegra = form.querySelector("#addRegra")
+const fortextarea = [regraText, descricaoText]
 
 const cardPreview = document.querySelector(".cardPreview")
 const cardNome = cardPreview.querySelector('.nomeGrupo').querySelector('h1')
@@ -87,20 +109,28 @@ const regrasArea = cardPreview.querySelector('.regras')
 
 fortextarea.forEach((e)=> {
     e.addEventListener('input', (e) => {
-        let info = regrasArea.querySelector(`div.info.${e.target.id}`)
+        let info = regrasArea.querySelector(`div.info.${"R"+regrasN}`)
         if (info) {
             info.innerText = e.target.value
             if (e.target.value === '') info.remove()
         } else {
             info = document.createElement('div')
             info.classList.add('info')
-            info.classList.add(e.target.id)
+            info.classList.add("R"+regrasN)
             regrasArea.appendChild(info)
             info.innerText = e.target.value
         }
 
     })
 })
+
+
+btnAddRegra.addEventListener("click", (e) => {
+    e.preventDefault
+    regrasN++
+    regraText.value = ''
+})
+
 
 grupoNome.addEventListener('input', (e) => {  
     cardNome.innerText = grupoNome.value
@@ -115,3 +145,5 @@ checkListaDeDesejos.addEventListener('change', (e)=> {
 chechTipoFesta.addEventListener('change', (e)=> {
     tipoFesta.innerText = chechTipoFesta.value
 })
+
+form.addEventListener("submit", (e) => e.preventDefault())
