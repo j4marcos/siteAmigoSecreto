@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!DOCTYPE html>
-<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -15,23 +13,20 @@
     <nav>
         <a href="index.html"><img src="src/style/presentIcons/icons8-gift-48.png" alt="Icon"> </a>
         <div class="buttons">
-            <button class="inicio ativo">inicio</button>
-            <button class="entrar">entrar</button>
+            <button class="grupos">grupos</button>
+            <button class="adicionarGrupo">adicionar</button>
+            <button class="criarGrupo">criar</button>
             <button class="perfil usuario"></button>
         </div>
     </nav>
+
     <div class="container">
-
-
 
         <section class="ativo" id="indexPage">
             <div class="page" id="page1">
                 <div>
                     <h1>Facilite o <span class="mudar">amigo secreto</span></h1>
                     <h2>e divirtase com amigos e familia!</h2>
-                    <a href="homepage.html">
-                        <h1>pagina prototipo</h1>
-                    </a>
                 </div>
 
                 <div>
@@ -94,30 +89,187 @@
 
         </section>
 
+        <section class="grupos" id="grupos">
+
+            <div class="gruposContainer">
+                <div class="aviso">
+                    <div class="presentGif"></div>
+                    <h2>voce ainda não adicionou nenhum grupo</h2>
+                </div>
+                
+                <div class="grupo">
+                    <div class="grupoInfo">
+                        <div class="nomeGrupo">
+                            <h1>amigo secreto da familia</h1>
+                        </div>
+                        <div class="regras">
+                            <div class="info">regra</div>
+                            <div class="info">regra</div>
+                            <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error ut
+                                libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque accusantium et
+                                totam
+                                molestiae quia!</div>
+                        </div>
+                    </div>
+                    <div class="amigoSecreto">
+                        <span class="rotulo">amigo secreto</span>
+                        <div class="amigo">
+                            <div class="foto"></div>
+                            <div class="nome">
+                                <h2>fulana</h2>
+                            </div>
+                        </div>
+                        <div class="listaDeDesejos">
+                            <span class="rotulo">lista de desejos</span>
+                            <div class="listaDePresentes">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, impedit?
+                            </div>
+                        </div>
+                        <div class="redesSociais">
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <div class="grupoInfo">
+                        <div class="nomeGrupo">
+                            <h1>amigo oculto do trabalho</h1>
+                        </div>
+                        <div class="regras">
+                            <div class="info">regra</div>
+                            <div class="info">status: aguardando</div>
+                            <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error ut
+                                libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque accusantium et
+                                totam
+                                molestiae quia!</div>
+                        </div>
+                    </div>
+                    <div class="amigoSecreto indefinido">
+                        <div class="aviso">
+                            <img src="src/style/presentIcons/icons8-gift-96.png" alt="">
+                            <p>amigo secreto ainda não foi definido</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
 
-        <section class="entrar">
-            <h1>formulario pra entrar</h1>
-            <h2>entrar com o google</h2>
-            <h2>entrar com o facebook</h2>
-            <a href="homepage.html">
-                <h1>Grupos</h1>
-            </a>
+        <section id="adicionar">
+            <div class="page" id="page1">
+                <div>
+                    <h1>Facilite o <span class="mudar">amigo secreto</span></h1>
+                    <h2>e divirtase com amigos e familia!</h2>
+
+                    <button>entrar no grupo</button>
+                </div>
+
+                <div>
+                    <h2>voce foi convidado a participar de:</h2>
+                    <div class="grupo">
+                        <div class="grupoInfo">
+                            <div class="nomeGrupo">
+                                <h1>amigo oculto dos dev</h1>
+                            </div>
+                            <div class="regras">
+                                <div class="info">regra</div>
+                                <div class="info">status: aguardando</div>
+                                <div class="info"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum sunt error ut
+                                    libero ea nobis, vero porro in, est quisquam hic aliquam, non odit itaque accusantium et
+                                    totam
+                                    molestiae quia!</div>
+                            </div>
+                        </div>
+                        <div class="amigoSecreto indefinido">
+                            <div class="aviso">
+                                <img src="src/style/presentIcons/icons8-gift-96.png" alt="">
+                                <p>amigo secreto ainda não foi definido</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="criar">
+            <div class="page">
+
+                <div>
+                    <h1>crie seu grupo:</h1>
+                    <form action="" class="criarGrupo">
+                        <label for="nomeDoGrupo">nome do grupo:</label>
+                        <input type="text" id="nomeDoGrupo">
+                        <label for="tipoFesta">tipo da brincadeira</label>
+                        <select name="tipoFesta" id="tipoFesta">
+                            <option value="secreto">amigo secreto</option>
+                            <option value="oculto">amigo oculto</option>
+                            <option value="doce">amigo doce</option>
+                            <option value="onça">amigo da onça</option>
+                            <option value="chinelo">amigo chinelo</option>
+                        </select>
+                        <label for="listaDeDesejos???">permitir lista de desejos</label>
+                        <input type="checkbox" name="" id="listaDeDesejos???">
+                        <label for="data">data da festa</label>
+                        <input type="date" name="" id="data">
+                        <label for="addRegra">adicionar regra</label>
+                        <button id="addRegra">+</button>
+                        <label for="descricao"></label>
+                        <input type="text" name="" id="descricao">
+                        <label for="addLink">adicionar link</label>
+                        <button id="addLink">+</button>
+                    </form>
+                    <button type="submit">criar grupo</button>
+                </div>
+
+                <div class="cardPreview">
+                    <h2>Previsualização:</h2>
+                    <div class="grupo">
+                        <div class="grupoInfo">
+                            <div class="nomeGrupo">
+                                <h1></h1>
+                            </div>
+                            <div class="regras">
+                                <!-- <div class="info"></div>
+                                <div class="info"></div>
+                                <div class="info"></div> -->
+                            </div>
+                        </div>
+                        <div class="amigoSecreto">
+                            <span class="rotulo">amigo secreto</span>
+                            <div class="amigo">
+                                <div class="foto"></div>
+                                <div class="nome">
+                                    <h2>[amigo]</h2>
+                                </div>
+                            </div>
+
+                            <div class="listaDeDesejos desativo">
+                                <span class="rotulo">lista de desejos</span>
+                                <div class="listaDePresentes">
+                                </div>
+                            </div>
+
+                            <div class="redesSociais desativo">
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
         </section>
 
 
 
-        <section class="footerInfo">
-            <footer>
-                <a target="_blank" href="https://icons8.com/icon/g7FGqx8h2AxR/gift">Gift</a> icon by <a target="_blank"
-                    href="https://icons8.com">Icons8</a> <br>
-                <a target="_blank" href="https://icons8.com/icon/2OqO9HAuQAyg/gift">Gift</a> icon by <a target="_blank"
-                    href="https://icons8.com">Icons8</a>
-            </footer>
+        <section id="perfil">
+            
         </section>
+
     </div>
 
-    <script type="module" src="src/scripts/scriptIndexPage.js"></script>
+    <script type="module" src="src/scripts/scriptHomepage.js
+    "></script>
+
 </body>
 
 </html>

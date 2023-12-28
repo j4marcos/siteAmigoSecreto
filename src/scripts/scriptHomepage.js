@@ -1,36 +1,40 @@
 const sessoes = document.querySelectorAll('section')
 const btns = document.querySelectorAll('button')
 const btnGrupos = document.querySelector('button.grupos')
-const btnAdicionar = document.querySelector('button.adicionar')
-const btnCriar = document.querySelector('button.criar')
+const btnAdicionarGrupo = document.querySelectorAll('button.adicionarGrupo')
+const btnCriarGrupo = document.querySelectorAll('button.criarGrupo')
 const btnPerfil = document.querySelector('button.perfil')
 const formCriarGrupo = document.querySelector('form.criarGrupo')
+const btnInicio = document.querySelector('button.inicio')
+
+
 
 btnGrupos.addEventListener('click', (e) => {
     fecharSessoes(e)
-    abrirSessao(sessoes.item(0))
+    abrirSessao(sessoes.item(1))
     carregarGrupos()
 })
 
-btnAdicionar.addEventListener('click', (e) => {
-    fecharSessoes(e)
-    abrirSessao(sessoes.item(1))
+btnAdicionarGrupo.forEach(e => {
+    e.addEventListener('click', (e) => {
+        fecharSessoes(e)
+        abrirSessao(sessoes.item(2))
+})
 })
 
-btnCriar.addEventListener('click', (e) => {
-    fecharSessoes(e)
-    abrirSessao(sessoes.item(2))
+btnCriarGrupo.forEach(e => {
+    e.addEventListener('click', (e) => {
+        fecharSessoes(e)
+    abrirSessao(sessoes.item(3))
 })
+})
+
 
 btnPerfil.addEventListener('click', (e) => {
     fecharSessoes(e)
-    abrirSessao(sessoes.item(3))
+    abrirSessao(sessoes.item(4))
 })
 
-formCriarGrupo.addEventListener('onchange', (e)=> {
-    e.preventDefault()
-    console.log("mudou")
-})
 
 
 function fecharSessoes(btn) {
@@ -49,5 +53,19 @@ function abrirSessao(s) {
 }
 
 function carregarGrupos() {
-    // metodo get
+    console.log("carregando")
 }
+
+
+const nomesFesta = document.querySelectorAll('.mudar')
+const nomesFestas = ['amigo secreto','amigo oculto','amigo chinelo', 'amigo doce', 'amigo onça']
+let n = 0
+
+setInterval(() => {
+    nomesFesta.forEach((e)=>{
+        e.innerText = nomesFestas[n]
+    })
+    n++
+    if (n >= nomesFestas.length) n =0
+}, 2000);
+
