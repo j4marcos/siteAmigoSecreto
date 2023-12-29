@@ -101,7 +101,7 @@ const btnAddRegra = form.querySelector("#addRegra")
 const fortextarea = [regraText, descricaoText]
 
 const cardPreview = document.querySelector(".cardPreview")
-const cardNome = cardPreview.querySelector('.nomeGrupo').querySelector('h1')
+const cardNome = cardPreview.querySelector('.nomeGrupo').querySelector('h2')
 const listaDeDesejos = cardPreview.querySelector(".listaDeDesejos")
 const tipoFesta = cardPreview.querySelector(".tipoFesta")
 const regrasArea = cardPreview.querySelector('.regras')
@@ -131,11 +131,9 @@ btnAddRegra.addEventListener("click", (e) => {
     regraText.value = ''
 })
 
-
 grupoNome.addEventListener('input', (e) => {  
     cardNome.innerText = grupoNome.value
 })
-
 
 checkListaDeDesejos.addEventListener('change', (e)=> {
     if (checkListaDeDesejos.checked) listaDeDesejos.classList.remove('desativo')

@@ -1,3 +1,5 @@
+
+
 * {
     padding: 0;
     margin: 0;
@@ -129,7 +131,7 @@ div.grupoInfo {
     background-color: gray;
 }
 
-div.grupoInfo h1 {
+div.grupoInfo h2 {
     font-size: 1.5rem;
 }
 
@@ -179,7 +181,7 @@ div.amigoSecreto .foto {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    margin: 10px;
+    margin: 10px 20px;
     position: relative;
 }
 
@@ -338,7 +340,18 @@ section#indexPage {
     }
 }
 
+.page .brMudar {
+    display: none;
+}
+
 @media (max-width: 450px) {
+    .page .brMudar {
+        display: block;
+    }    
+    
+    .page h1 {
+        font-size: 12vw;
+    }
     div.grupo {
         flex-wrap: wrap;
     }
