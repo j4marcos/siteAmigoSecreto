@@ -199,32 +199,30 @@
 
                 <div>
                     <h1>crie seu grupo:</h1>
-                    <form action="formsubmiturlapi" class="criarGrupo">
+                    <form action="(url do form submit)" method="post" data-form class="criarGrupo">
                         <label for="nomeDoGrupo">nome do grupo:</label>
-                        <input type="text" id="nomeDoGrupo">
-                        <label for="tipoFesta">tipo da brincadeira</label>
-                        <select name="tipoFesta" id="tipoFesta">
+                        <input type="text" id="nomeDoGrupo" required>
+                        <label for="tipoFesta" >tipo da brincadeira</label>
+                        <select name="tipoFesta" id="tipoFesta" required>
                             <option value="amigo secreto">amigo secreto</option>
                             <option value="amigo oculto">amigo oculto</option>
                             <option value="amigo doce">amigo doce</option>
                             <option value="amigo onça">amigo da onça</option>
                             <option value="amigo chinelo">amigo chinelo</option>
                         </select>
-                        <div>
-                            <label for="checkListaDeDesejos">permitir lista de desejos</label>
+                        <div class="inputLine">
+                            <label  for="checkListaDeDesejos">permitir lista de desejos</label>
                             <input type="checkbox" name="" id="checkListaDeDesejos">
                         </div>
                         <label for="regraText">adicionar regras</label>
-                        <div>
+                        <div class="inputLine">
                             <input type="text" name="" id="regraText">
                             <button id="addRegra">+</button>
                         </div>
                         <label for="descricaoText">descrição</label>
                         <input type="text" name="" id="descricaoText">
-                        <div>
-                        </div>
+                        <button type="submit" data-buttom id="submitCriarGrupo">criar grupo</button>
                     </form>
-                    <button type="submit">criar grupo</button>
                 </div>
 
                 <div class="cardPreview">

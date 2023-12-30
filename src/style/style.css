@@ -30,6 +30,12 @@ button {
     padding: 10px;
     border-radius: 8px;
     background-color: lightgray;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor:not-allowed;
+    background-color: gray;
 }
 
 button.ativo {
@@ -129,6 +135,7 @@ div.grupoInfo {
     background-size: cover;
     background-position: center;
     background-color: gray;
+    width: 100%;
 }
 
 div.grupoInfo h2 {
@@ -251,13 +258,55 @@ section#criar form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 500px;
-    margin-top: 20px;
+    margin: 30px;
+    max-width: 350px;
+}
+section#criar form label, button, input {
+    display: block;
 }
 
+section#criar form label {
+    font-weight: 700;
+}
+section#criar .inputLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+section#criar #checkListaDeDesejos{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+section#criar form button, input, select {
+    width: 100%;
+    font: inherit;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+section#criar form input:hover , select:hover {
+    background-color: rgb(235, 235, 235);
+}
 section#criar form button {
     width: fit-content;
+    min-width: 35px;
 }
+section#criar form #submitCriarGrupo {
+    margin: auto;
+    margin-top: 10px;
+}
+
+.success {
+    color: greenyellow;
+} 
+
+.error {
+    color: tomato;
+}
+
 
 
 section#perfil {
@@ -279,7 +328,7 @@ section#indexPage {
 }
 
 .page .grupo {
-    margin: 10px;
+    margin: 18px;
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.281);
 }
 
@@ -300,6 +349,13 @@ section#indexPage {
     margin: 10px;
 }
 
+.page #downPage2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -318,13 +374,6 @@ section#indexPage {
 
 .page button {
     margin: 15px;
-}
-
-.page #downPage2 {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 @media (min-width: 800px) {
@@ -348,6 +397,10 @@ section#indexPage {
     .page .brMudar {
         display: block;
     }    
+
+    section#criar .page {
+        flex-direction: column-reverse;
+    }
     
     .page h1 {
         font-size: 12vw;
