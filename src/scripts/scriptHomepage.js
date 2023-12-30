@@ -154,70 +154,70 @@ form.addEventListener("submit", (e) => {
 
 
 // classe do canal tiger codes
-class FormSubmit {
-    constructor(settings) {
-    this.settings = settings
-    this.form = document.querySelector(settings.form)
-    this.formButtom = document.querySelector(settings.formButtom)
-    if (this.form) {
-        this.url = this.form.getAttribute("action")
-    }
-    this.sendForm = this.sendForm.bind(this)
-}
+// class FormSubmit {
+//     constructor(settings) {
+//     this.settings = settings
+//     this.form = document.querySelector(settings.form)
+//     this.formButtom = document.querySelector(settings.formButtom)
+//     if (this.form) {
+//         this.url = this.form.getAttribute("action")
+//     }
+//     this.sendForm = this.sendForm.bind(this)
+// }
 
-displaySuccess() {
-    this.form.innerHTML = this.settings.success
-}
-
-
-getFormObject() {
-    const formObject = {}
-    const fields = this.form.querySelectorAll("[name]")
-    fields.forEach((field) => {
-        formObject[field.getAttribute("name")] = field.value
-    })
-    return formObject
-}
+// displaySuccess() {
+//     this.form.innerHTML = this.settings.success
+// }
 
 
-onSubmission(event) {
-    event.preventDefault()
-    event.target.disabled = true
-    event.target.innerText = "enviando..."
-}
+// getFormObject() {
+//     const formObject = {}
+//     const fields = this.form.querySelectorAll("[name]")
+//     fields.forEach((field) => {
+//         formObject[field.getAttribute("name")] = field.value
+//     })
+//     return formObject
+// }
 
-async sendForm(event) {
-    this.onSubmission(event)
-    try {
-    await fetch(this.url, {
-        method: 'POST',
-        headers: {
-            "content-Type": "application/json",
-            Accept: "application/json"
-        },
-        body: JSON.stringify(this.getFormObject()) ,
-    })
-    this.displaySuccess()
-    } catch (error) {
-        this.displayError()
-    }
-}
 
-displayError() {
-    this.form.innerHTML = this.settings.error
-}
+// onSubmission(event) {
+//     event.preventDefault()
+//     event.target.disabled = true
+//     event.target.innerText = "enviando..."
+// }
 
-init() {
-    if(this.form) this.formButtom.addEventListener("click", this.sendForm)
-    return this
-}
-}
+// async sendForm(event) {
+//     this.onSubmission(event)
+//     try {
+//     await fetch(this.url, {
+//         method: 'POST',
+//         headers: {
+//             "content-Type": "application/json",
+//             Accept: "application/json"
+//         },
+//         body: JSON.stringify(this.getFormObject()) ,
+//     })
+//     this.displaySuccess()
+//     } catch (error) {
+//         this.displayError()
+//     }
+// }
 
-const formSubmit = new FormSubmit({
-    form: "[data-form]",
-    button: "[data-buttom",
-    succces: "<h1 class='success'>Mensagem enviada!</h1>",
-    error: "<h1 class='error'>Não foi posivel enviar sua mensagem.</h1>"
-})
+// displayError() {
+//     this.form.innerHTML = this.settings.error
+// }
 
-formSubmit.init()
+// init() {
+//     if(this.form) this.formButtom.addEventListener("click", this.sendForm)
+//     return this
+// }
+// }
+
+// const formSubmit = new FormSubmit({
+//     form: "[data-form]",
+//     button: "[data-buttom",
+//     succces: "<h1 class='success'>Mensagem enviada!</h1>",
+//     error: "<h1 class='error'>Não foi posivel enviar sua mensagem.</h1>"
+// })
+
+// formSubmit.init()
