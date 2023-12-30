@@ -109,14 +109,15 @@ const regrasArea = cardPreview.querySelector('.regras')
 
 fortextarea.forEach((e) => {
     e.addEventListener('input', (e) => {
-        let info = regrasArea.querySelector(`div.info.${"R" + regrasN}`)
+        const marcador = e.target.id == "descricaoText" ? "D" : "R" + regrasN
+        let info = regrasArea.querySelector(`div.info.${marcador}`)
         if (info) {
             info.innerText = e.target.value
             if (e.target.value === '') info.remove()
         } else {
             info = document.createElement('div')
             info.classList.add('info')
-            info.classList.add("R" + regrasN)
+            info.classList.add(marcador)
             regrasArea.appendChild(info)
             info.innerText = e.target.value
         }

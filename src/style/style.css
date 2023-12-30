@@ -33,6 +33,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.514) ;
+}
+
 button:disabled {
     cursor:not-allowed;
     background-color: gray;
@@ -254,21 +258,21 @@ section#criar {
     background-color: white;
 }
 
-section#criar form {
+section form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 30px;
     max-width: 350px;
 }
-section#criar form label, button, input {
+section form label, button, input {
     display: block;
 }
 
-section#criar form label {
+section form label {
     font-weight: 700;
 }
-section#criar .inputLine {
+section .inputLine {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -280,21 +284,21 @@ section#criar #checkListaDeDesejos{
     margin: 10px;
     cursor: pointer;
 }
-section#criar form button, input, select {
+section form button, input, select {
     width: 100%;
     font: inherit;
     padding: 8px;
     margin-bottom: 10px;
     margin-top: 5px;
 }
-section#criar form input:hover , select:hover {
+section form input:hover , select:hover {
     background-color: rgb(235, 235, 235);
 }
-section#criar form button {
+section form button {
     width: fit-content;
     min-width: 35px;
 }
-section#criar form #submitCriarGrupo {
+section form #submitCriarGrupo, #criarUser {
     margin: auto;
     margin-top: 10px;
 }
@@ -309,9 +313,44 @@ section#criar form #submitCriarGrupo {
 
 
 
-section#perfil {
-    background-color: lightgray;
+section#perfil .page {
+   padding: 10px;
+   padding-top: 30px;
 }
+
+section#perfil .page .EntrarAlternativo button{
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    margin: 10px 2px;
+    border-radius: 8px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: white;
+} 
+
+section#perfil .page .googleOption {
+background-color: #db4a39;
+}
+
+section#perfil .page .facebookOption {
+    background-color: #3b5998;
+}
+
+section#perfil .page .cadastroBox{
+    margin: auto;
+} 
+
+section#perfil form button {
+    padding: 10px 30px;
+}
+
+section#perfil .desativo{
+    display: none;
+} 
+
+
 
 
 section#indexPage {
